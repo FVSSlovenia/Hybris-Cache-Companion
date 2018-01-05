@@ -28,23 +28,23 @@
             var move = function() {
                 var st = $(window).scrollTop();
                 var ot = $anchor.offset().top;
-
+//following if-line is for testing possible older browser's malfunction only
                 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
 
                     $scroller.css({
-                        position: "relative",
-                        top: "",
-                        "box-shadow": "",
-                        '-moz-box-shadow': "",
-                        '-webkit-box-shadow': "",
-                        padding: "10px",
+                            position: "fixed",
+                            top: "0",
+                            "box-shadow": "0px 5px 5px #d4d4d4",
+                            '-moz-box-shadow': "0px 5px 5px #d4d4d4",
+                            '-webkit-box-shadow': "0px 5px 5px #d4d4d4",
+                            padding: "10px"
                     });
                 }
 
 
                 else {
 
-                    if(st > ot) {
+                    if(st => ot) {
                         $scroller.css({
                             position: "fixed",
                             top: "0",
@@ -56,7 +56,7 @@
                     }
 
                     else {
-                        if(st <= ot) {
+                        if(st < ot) {
                             $scroller.css({
                                 position: "relative",
                                 top: "",
