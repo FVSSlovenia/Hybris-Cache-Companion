@@ -1,6 +1,6 @@
 # Hybris-Cache-Companion
 
-To add it to Firefox or Chrome, make sure you have a userscript extension such as Tampermonkey or Greasemonkey installed. Then open the link in that browser:
+To add it to Firefox, Safari or Chrome, make sure you have a userscript extension such as Tampermonkey or Greasemonkey installed. Then open the link in that browser:
 
 https://github.com/FVSSlovenia/Hybris-Cache-Companion/raw/master/Cache%20Companion_v0.1.user.js
 
