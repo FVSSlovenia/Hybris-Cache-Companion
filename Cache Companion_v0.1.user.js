@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Cache Companion
-// @version      0.1
-// @description  Improvements for Cache button on Hybris
+// @version      0.11
+// @description  Improvements for Content Managing on Hybris
 // @author       FVS.Slovenia 69
 // @match        https://www.enterurlhere.com/*
 // @grant        none
@@ -13,6 +13,23 @@
 
     $(document).ready( function() {
 
+         //Detect Scene7 and paint it grey - as QC
+         $("img[src*='scene7']").css({
+           " -webkit-filter": "grayscale(100%)",
+            "filter": "grayscale(100%)",
+                             "box-shadow": "0px 5px 5px #d4d4d4",
+                            '-moz-box-shadow': "0px 5px 5px #d4d4d4",
+                            '-webkit-box-shadow': "0px 5px 5px #d4d4d4",
+           });
+
+        $("div[style*='scene7']").css({
+           " -webkit-filter": "grayscale(100%)",
+            "filter": "grayscale(100%)",
+                             "box-shadow": "0px 5px 5px #d4d4d4",
+                            '-moz-box-shadow': "0px 5px 5px #d4d4d4",
+                            '-webkit-box-shadow': "0px 5px 5px #d4d4d4",
+           });
+        
         //remove that annoying false email alert that kepps pupping up next to cache button
         $('.headerFlyoutError').remove();
 
