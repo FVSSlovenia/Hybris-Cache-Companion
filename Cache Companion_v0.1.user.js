@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Cache Companion
-// @version      0.11
+// @version      0.12a
 // @description  Improvements for Content Managing on Hybris
 // @author       FVS.Slovenia 69
 // @match        https://www.enterurlhere.com/*
@@ -13,8 +13,8 @@
 
     $(document).ready( function() {
 
-         //Detect Scene7 and paint it grey - as QC
-         $("img[src*='scene7']").css({
+         //Detect Mixed Content and paint it grey
+         $("img[src*='http://']").css({
            " -webkit-filter": "grayscale(100%)",
             "filter": "grayscale(100%)",
                              "box-shadow": "0px 5px 5px #d4d4d4",
@@ -22,7 +22,7 @@
                             '-webkit-box-shadow': "0px 5px 5px #d4d4d4",
            });
 
-        $("div[style*='scene7']").css({
+        $("div[style*='http://']").css({
            " -webkit-filter": "grayscale(100%)",
             "filter": "grayscale(100%)",
                              "box-shadow": "0px 5px 5px #d4d4d4",
