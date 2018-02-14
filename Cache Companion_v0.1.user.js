@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Cache Companion
-// @version      0.12a
+// @version      0.12b
 // @description  Improvements for Content Managing on Hybris
 // @author       FVS.Slovenia 69
 // @match        https://www.enterurlhere.com/*
@@ -13,8 +13,18 @@
 
     $(document).ready( function() {
 
+        //Amplience http/https issue fix 
+                $("img[src*='media.x']").each(function() {
+               $(this).attr("src", $(this).attr("src").replace("https://", "//"));
+    $(this).attr("src", $(this).attr("src").replace("//media", "http://media"));
+});
+$("div[style*='media.x']").each(function() {
+    $(this).attr("style", $(this).attr("style").replace("https://", "//"));
+    $(this).attr("style", $(this).attr("style").replace("//media", "http://media"));
+});
+        
          //Detect Mixed Content and paint it grey
-         $("img[src*='http://']").css({
+       /*  $("img[src*='http://']").css({
            " -webkit-filter": "grayscale(100%)",
             "filter": "grayscale(100%)",
                              "box-shadow": "0px 5px 5px #d4d4d4",
@@ -29,7 +39,7 @@
                             '-moz-box-shadow': "0px 5px 5px #d4d4d4",
                             '-webkit-box-shadow': "0px 5px 5px #d4d4d4",
            });
-        
+        */
         //remove that annoying false email alert that kepps pupping up next to cache button
         $('.headerFlyoutError').remove();
 
