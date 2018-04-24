@@ -41,7 +41,7 @@ $(document).ready(function MixedContent() {
     }
     */
     
-    var Mixedlink= $("a[href*='http://']").length;
+    var Mixedlink= $("a[href*='http://']").length + $("area[href*='http://']").length;
     var Mixedbg= $("div[style*='http://']").length;
     var Mixedimg= $("img[src*='http://']").length;
     
