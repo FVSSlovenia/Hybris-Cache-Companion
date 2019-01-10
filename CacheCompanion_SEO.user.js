@@ -54,12 +54,6 @@ $(document).ready(function MixedContent() {
     var MixedOn = 0; //enable(1) or disable (0) the popup
     var MixedAltOn = 1; //enable(1) or disable (0) the cache attachment
     var mixednum = 0;
-    if(window.location.href.indexOf("xxxlutz.se") > -1) {
-    mixednum = 1;
-    }
-    else if(window.location.href.indexOf("xxxlutz.cz") > -1) {
-     mixednum = 0;
-    }
     /* Domain template
     else if(window.location.href.indexOf(" -Domain name- ") > -1) {
      mixednum = -Number of header/footer errors here- ;
