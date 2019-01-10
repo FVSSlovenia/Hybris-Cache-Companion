@@ -31,12 +31,7 @@ $("main img").each(function() {
         var imgWidth = $(this).width();
         $("<div class='img-alttext'><p>" + imageCaption +
             "</p></div>").css({
-            "margin-top": "-80px",
             "max-width": imgWidth + "px",
-            "height": "80px",
-            "position": "relative",
-            "display": "table",
-"float": "right"
         }).insertAfter(this);
     }
     else if (imageCaption==undefined){
